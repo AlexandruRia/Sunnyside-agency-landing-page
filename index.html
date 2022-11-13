@@ -6,12 +6,15 @@
         <title>Sunnyside agency landing page</title>
         <link rel="icon" type="img/png" sizes="32x32" href="./images/favicon-32x32.png">
         <link rel="stylesheet" href="styles.css">
+        <script src="./script.js"></script>
     </head>
     <body>
         <header>
             <div class="logo-nav-container">
                 <img class="logo" src="./images/logo.svg" alt="sunnyside logo">
-                <nav class="navigation-bar"> 
+                <img class="hamburger-icon" src="./images/icon-hamburger.svg" alt="hamburger icon" onclick="toggle_window()"></li>
+                <nav class="navigation-bar" id="nav"> 
+                   <div class="triangle"></div>
                     <ul class="nav-links">
                         <li><a href="">About</a></li>
                         <li><a href=""><li>Services</a></li>
@@ -31,8 +34,15 @@
                         Engage your clients through compelling visuals that do most of the marketing for you.</p>
                     <div><a href="">LEARN MORE</a></div>
                 </section>
-                <img class="service-image" src="./images/desktop/image-transform.jpg" alt="image of an egg">
-                <img class="service-image" src="./images/desktop/image-stand-out.jpg" alt="image of a pink cup">
+                <picture class="service-image image-1">
+                    <source media="(max-width:450px)" srcset="./images/mobile/image-transform.jpg">
+                    <img src="./images/desktop/image-transform.jpg" alt="image of an egg">
+                </picture>
+                <picture class="service-image image-2">
+                    <source media="(max-width:450px)" srcset="./images/mobile/image-stand-out.jpg">
+                    <img src="./images/desktop/image-stand-out.jpg" alt="image of a pink cup">    
+                </picture>
+                
                 <section class="service service-2">
                     <h2>Stand out to the right audience</h2>
                     <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
